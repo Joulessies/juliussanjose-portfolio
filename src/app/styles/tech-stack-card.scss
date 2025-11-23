@@ -1,0 +1,141 @@
+.tech-stack-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.tech-stack-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tech-stack-description {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 8px 0 0 0;
+  padding: 0;
+  opacity: 0.85;
+}
+
+.marquee-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .react-fast-marquee {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--bg-primary) 0%,
+      transparent 100%
+    );
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--bg-primary) 0%,
+      transparent 100%
+    );
+  }
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  margin: 0 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 100px;
+  flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.tech-logo {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent !important;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 2px 4px var(--shadow-sm)) brightness(1.1)
+      contrast(1.1);
+  }
+}
+
+.dark .tech-logo img {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 2px 4px var(--shadow-sm)) brightness(1.2);
+}
+
+.tech-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.tech-category {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  text-align: center;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.tech-item:hover .tech-name {
+  color: var(--accent);
+}
+
+.tech-item:hover .tech-category {
+  opacity: 1;
+  color: var(--text-secondary);
+}

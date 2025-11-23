@@ -38,8 +38,13 @@ $font-stack: 'Rethink Sans', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  scroll-behavior: smooth;
   font-family: $font-stack;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {

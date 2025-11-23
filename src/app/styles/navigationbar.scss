@@ -28,6 +28,7 @@ $desktop: 1280px;
       font-weight: bold;
       font-size: 1.1rem;
       margin: 0;
+      user-select: none;
       color: var(--text-primary);
 
       @media (min-width: $mobile) {
@@ -77,9 +78,26 @@ $desktop: 1280px;
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
     color: var(--accent);
     background-color: var(--bg-secondary);
+  }
+
+  &.source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: scale(1.1);
+    }
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { ThemeToggle } from './theme-toggle';
@@ -56,10 +56,15 @@ export function MobileNav() {
   };
 
   const links = [
-    { href: '/home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/works', label: 'Works' },
     { href: '/about', label: 'About' },
-    { href: 'https://www.github.com', label: 'Source', external: true },
+    {
+      href: 'https://github.com/Joulessies/juliussanjose-portfolio',
+      label: 'Source',
+      external: true,
+      icon: Github,
+    },
   ];
 
   return (
@@ -113,7 +118,8 @@ export function MobileNav() {
                         className="mobile-menu-link"
                         onClick={() => setIsOpen(false)}
                       >
-                        {link.label}
+                        {link.icon && <link.icon size={18} />}
+                        <span>{link.label}</span>
                       </a>
                     ) : (
                       <Link

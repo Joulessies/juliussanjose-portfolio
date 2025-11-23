@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.scss';
 import { ThemeProvider } from './providers/theme-provider';
 import { ThemeBackground } from './components/theme-background';
+import { DynamicTitle } from './components/dynamic-title';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Julius San Jose - Home',
+  title: 'Home - Julius San Jose',
   description: 'Julius San Jose - Portfolio',
 };
 
@@ -33,8 +34,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
+          <DynamicTitle />
           <ThemeBackground />
-          {children}
+        {children}
         </ThemeProvider>
       </body>
     </html>

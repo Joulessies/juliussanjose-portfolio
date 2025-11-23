@@ -1,0 +1,46 @@
+'use client';
+
+import { motion } from 'motion/react';
+import '../styles/featured-projects-card.scss';
+
+const projects = [
+  {
+    name: 'React Fast Bento',
+    type: ['NPM Package'],
+  },
+  {
+    name: 'Daffodil Flower Shop',
+    type: ['Branding', 'Ecommerce Experience', 'Custom Integrations'],
+  },
+];
+
+export function FeaturedProjectsCard() {
+  return (
+    <div className="featured-projects-card">
+      <motion.h2
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="projects-title"
+      >
+        Featured Projects
+      </motion.h2>
+
+      <div className="projects-list">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.name}
+            className="project-row"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: index * 0.08 }}
+            whileHover={{ x: 6 }}
+          >
+            <span className="project-name">{project.name}</span>
+            <span className="project-type">{project.type.join(' • ')}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
