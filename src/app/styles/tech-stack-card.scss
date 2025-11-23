@@ -18,12 +18,13 @@
 }
 
 .tech-stack-description {
-  font-size: 0.75rem;
-  line-height: 1.5;
+  font-size: 0.7rem;
+  line-height: 1.7;
   color: var(--text-secondary);
   margin: 8px 0 0 0;
   padding: 0;
-  opacity: 0.85;
+  opacity: 0.9;
+  max-width: 620px;
 }
 
 .marquee-container {
