@@ -4,6 +4,7 @@ import './globals.scss';
 import { ThemeProvider } from './providers/theme-provider';
 import { ThemeBackground } from './components/theme-background';
 import { DynamicTitle } from './components/dynamic-title';
+import { PageTransition } from './components/page-transition';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,7 +37,7 @@ export default function RootLayout({
         >
           <DynamicTitle />
           <ThemeBackground />
-        {children}
+          <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
     </html>

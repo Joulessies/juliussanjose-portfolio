@@ -8,9 +8,11 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="home-page">
       <NavigationBar />
-      <HomeContent />
+      <main className="home-page__content">
+        <HomeContent />
+      </main>
     </div>
   );
 }

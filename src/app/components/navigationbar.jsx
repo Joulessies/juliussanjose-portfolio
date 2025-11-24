@@ -50,7 +50,7 @@ export default function NavigationBar() {
 
       <div className="navbar-actions desktop-only">
         <ThemeToggle />
-    </div>
+      </div>
 
       <MobileNav />
     </motion.nav>
