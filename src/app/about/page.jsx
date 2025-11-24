@@ -4,8 +4,8 @@ import NavigationBar from '../components/navigationbar';
 import { Timeline } from '../components/timeline';
 import '../styles/about.scss';
 
-  { label: 'Team projects led', value: '6' },
 const stats = [
+  { label: 'Team projects led', value: '6' },
   { label: 'Security labs hardened', value: '18' },
   { label: 'Peer rating', value: '4.9/5' },
   { label: 'Average response time', value: '< 24h' },
