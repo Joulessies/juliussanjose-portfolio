@@ -20,7 +20,7 @@ export function PageTransition({ children }) {
   useEffect(() => {
     setCurrentLabel(routeLabels[pathname] ?? 'Julius San Jose');
     setShowOverlay(true);
-    const timer = setTimeout(() => setShowOverlay(false), 650);
+    const timer = setTimeout(() => setShowOverlay(false), 900);
 
     return () => {
       clearTimeout(timer);
@@ -33,10 +33,10 @@ export function PageTransition({ children }) {
         <motion.div
           key={pathname}
           className="page-transition-wrapper"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4, delay: 0.7 }}
         >
           {children}
         </motion.div>
@@ -50,7 +50,7 @@ export function PageTransition({ children }) {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.85 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             {currentLabel}
           </motion.div>

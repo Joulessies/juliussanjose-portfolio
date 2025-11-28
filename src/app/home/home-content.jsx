@@ -10,12 +10,7 @@ import Image from 'next/image';
 
 export default function HomeContent() {
   return (
-    <motion.main
-      className="page-content"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
+    <main className="page-content">
       <div className="bento-grid">
         <div className="item item1">
           <ShaderGradientCard />
@@ -127,6 +122,6 @@ export default function HomeContent() {
           </div>
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 }

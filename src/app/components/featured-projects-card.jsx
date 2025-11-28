@@ -5,6 +5,10 @@ import '../styles/featured-projects-card.scss';
 
 const projects = [
   {
+    name: 'Julius San Jose Portfolio',
+    type: ['Next.js', 'Motion', 'SCSS'],
+  },
+  {
     name: 'React Fast Bento',
     type: ['NPM Package'],
   },
