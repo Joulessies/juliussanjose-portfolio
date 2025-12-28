@@ -10,9 +10,9 @@ import { motion } from 'motion/react';
 export default function NavigationBar() {
   return (
     <motion.nav
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={{ opacity: 1, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0 }}
       className="navbar"
     >
       <div className="navbar-logo">

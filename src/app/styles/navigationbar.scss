@@ -89,9 +89,6 @@ $desktop: 1280px;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -105,10 +102,6 @@ $desktop: 1280px;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-
-    svg {
-      transition: transform 0.2s ease;
-    }
 
     &:hover svg {
       transform: scale(1.1);
