@@ -96,26 +96,21 @@ export default function HomeContent() {
             <p className="trust-eyebrow">Why teams trust me</p>
             <div className="trust-stats">
               <div>
-                <h4>6</h4>
-                <span>Team projects led</span>
-              </div>
-              <div>
-                <h4>18</h4>
-                <span>Security labs hardened</span>
+                <h4>5</h4>
+                <span>School projects completed</span>
               </div>
               <div>
                 <h4>4.9/5</h4>
-                <span>Peer feedback</span>
+                <span>Peer rating average for class projects</span>
               </div>
             </div>
             <blockquote>
-              “Julius led our TIP capstone squad with security-first thinking
-              and still shipped polished UX. He caught bugs before our profs and
-              kept morale high.”{' '}
-              <span>— M. Santos, Classmate & Frontend Lead</span>
+              "Julius brings security-first thinking to every project and still
+              ships polished UX. He caught bugs before our profs and kept morale
+              high." <span>— M. Santos, Classmate & Frontend Lead</span>
             </blockquote>
             <div className="trust-proof">
-              <span>🎓 Top section lead for TIP IT 4-2</span>
+              <span>🎓 Top section lead for TIP IT 4-2 class projects</span>
               <span>🤝 Mentor for junior classmates</span>
               <span>🛡️ Cybersecurity focus on every sprint</span>
             </div>

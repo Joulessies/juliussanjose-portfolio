@@ -5,16 +5,6 @@ import '../styles/timeline.scss';
 
 const timelineData = [
   {
-    id: 1,
-    year: '2024',
-    title: 'Capstone Project Lead',
-    organization: 'TIP - IT 4-2',
-    description:
-      'Leading security-first development for final year capstone project. Implementing threat modeling and secure coding practices while maintaining polished UX.',
-    type: 'project',
-    tags: ['Leadership', 'Security', 'Full-Stack'],
-  },
-  {
     id: 2,
     year: '2023',
     title: 'React Fast Bento',
@@ -102,4 +92,3 @@ export function Timeline() {
     </div>
   );
 }
-

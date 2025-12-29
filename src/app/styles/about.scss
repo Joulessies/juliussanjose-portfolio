@@ -15,9 +15,9 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: minmax(440px, auto);
-  gap: clamp(0.6rem, 1vw, 1rem);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(360px, auto);
+  gap: 12px;
   width: 100%;
   min-height: 0;
 
@@ -39,15 +39,19 @@
     &--timeline {
       padding: 0;
       overflow: hidden;
-      align-self: stretch;
       display: flex;
       flex-direction: column;
+      height: 590px !important;
+      max-height: 590px !important;
+      min-height: 590px !important;
 
       .timeline-container {
         flex: 1;
-        height: auto;
+        min-height: 0;
         overflow-y: auto;
+        overflow-x: hidden;
         scrollbar-width: none;
+        -ms-overflow-style: none;
 
         &::-webkit-scrollbar {
           display: none;

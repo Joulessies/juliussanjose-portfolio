@@ -6,7 +6,6 @@ import '../styles/about.scss';
 
 const stats = [
   { label: 'Team projects led', value: '6' },
-  { label: 'Security labs hardened', value: '18' },
   { label: 'Peer rating', value: '4.9/5' },
   { label: 'Average response time', value: '< 24h' },
 ];
@@ -118,7 +117,7 @@ export default function AboutPage() {
             </div>
             <p className="about-profile__bio">
               I build secure-by-default experiences for student teams, founders,
-              and freelance partners. Whether it&apos;s a capstone defense or a
+              and freelance partners. Whether it&apos;s a school project or a
               production delivery, I blend expressive UI with hardened
               infrastructure and crisp documentation.
             </p>
