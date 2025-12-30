@@ -37,6 +37,16 @@ export default function NavigationBar() {
         </li>
         <li className="navbar-item">
           <a
+            className="navbar-link"
+            href="https://drive.google.com/file/d/1m4JXhGirK2zeWFgnubkfjFGeZ0cUAE6n/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
             className="navbar-link source-link"
             href="https://github.com/Joulessies/juliussanjose-portfolio"
             target="_blank"

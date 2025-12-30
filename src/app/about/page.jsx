@@ -74,6 +74,12 @@ const contactLinks = [
     subtext: 'Replies within 24 hours',
   },
   {
+    label: 'Resume',
+    href: 'https://drive.google.com/file/d/1m4JXhGirK2zeWFgnubkfjFGeZ0cUAE6n/view?usp=sharing',
+    subtext: 'View my resume',
+    external: true,
+  },
+  {
     label: 'Book a call',
     href: 'https://cal.com/julius-san-jose/meeting',
     subtext: '30-minute intro on Cal.com',

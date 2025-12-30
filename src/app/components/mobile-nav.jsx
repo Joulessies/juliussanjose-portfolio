@@ -60,6 +60,11 @@ export function MobileNav() {
     { href: '/works', label: 'Works' },
     { href: '/about', label: 'About' },
     {
+      href: 'https://drive.google.com/file/d/1m4JXhGirK2zeWFgnubkfjFGeZ0cUAE6n/view?usp=sharing',
+      label: 'Resume',
+      external: true,
+    },
+    {
       href: 'https://github.com/Joulessies/juliussanjose-portfolio',
       label: 'Source',
       external: true,
