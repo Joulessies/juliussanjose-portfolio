@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 export default function HomeContent() {
   return (
-    <main className="page-content">
+    <div className="page-content">
       <div className="bento-grid">
         <div className="item item1">
           <ShaderGradientCard />
@@ -33,7 +33,7 @@ export default function HomeContent() {
                   src="/profilepicture.png"
                   alt="Julius San Jose"
                   fill
-                  sizes="96px"
+                  sizes="(max-width: 768px) 56px, (max-width: 600px) 48px, 64px"
                   priority
                 />
               </div>
@@ -63,7 +63,7 @@ export default function HomeContent() {
             </motion.div>
           </div>
         </div>
-        <div className="item item4">
+        <div className="item item5">
           <div className="availability-card">
             <p className="availability-eyebrow">Availability</p>
             <h3>Accepting select freelance projects for Q1 2026.</h3>
@@ -117,6 +117,6 @@ export default function HomeContent() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
