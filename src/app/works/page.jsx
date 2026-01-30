@@ -71,6 +71,19 @@ const grapheNotetakingWork = {
   },
 };
 
+const markdownTableRepairWork = {
+  title: 'Markdown Table Repair',
+  subtitle: 'Tool',
+  description:
+    'A tool that fixes and normalizes markdown tables—aligns columns, corrects delimiters, and repairs broken table syntax so tables render correctly.',
+  badges: ['Markdown', 'Tool', 'Open Source'],
+  cta: {
+    label: 'View Project',
+    href: '#',
+    external: false,
+  },
+};
+
 const placeholderSlots = Array.from({ length: 1 }, (_, index) => index);
 
 export default function WorksPage() {
@@ -201,6 +214,29 @@ export default function WorksPage() {
                 rel={grapheNotetakingWork.cta.external ? 'noreferrer' : undefined}
               >
                 {grapheNotetakingWork.cta.label}
+              </Link>
+            </article>
+
+            <article className="item work-item">
+              <h2>{markdownTableRepairWork.title}</h2>
+              <p className="work-item__subtitle">
+                {markdownTableRepairWork.subtitle}
+              </p>
+              <p className="work-item__description">
+                {markdownTableRepairWork.description}
+              </p>
+              <div className="work-item__badges">
+                {markdownTableRepairWork.badges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
+              <Link
+                href={markdownTableRepairWork.cta.href}
+                className="work-item__cta"
+                target={markdownTableRepairWork.cta.external ? '_blank' : undefined}
+                rel={markdownTableRepairWork.cta.external ? 'noreferrer' : undefined}
+              >
+                {markdownTableRepairWork.cta.label}
               </Link>
             </article>
 

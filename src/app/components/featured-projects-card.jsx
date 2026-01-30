@@ -28,6 +28,10 @@ const projects = [
     name: 'Graphe Notetaking App',
     type: ['Notetaking', 'Productivity', 'School Project'],
   },
+  {
+    name: 'Markdown Table Repair',
+    type: ['Markdown', 'Tool', 'Open Source'],
+  },
 ];
 
 export function FeaturedProjectsCard() {
