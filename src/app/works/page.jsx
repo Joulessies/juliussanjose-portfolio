@@ -32,7 +32,46 @@ const reactFastBentoWork = {
   },
 };
 
-const placeholderSlots = Array.from({ length: 4 }, (_, index) => index);
+const pitakapalWork = {
+  title: 'Pitakapal',
+  subtitle: 'School Project',
+  description:
+    'A mobile-friendly app for budget tracking and savings goals, helping users manage finances with a simple, visual approach.',
+  badges: ['Web App', 'Finance', 'School Project'],
+  cta: {
+    label: 'View Project',
+    href: '#',
+    external: false,
+  },
+};
+
+const olfuCommuteSmartWork = {
+  title: 'OLFU Commute Smart',
+  subtitle: 'Freelance · OLFU',
+  description:
+    'Commute and transport companion for the OLFU community—route info, jeepney and shuttle guidance, and campus transit tips to make getting around easier.',
+  badges: ['Transport', 'Freelance', 'OLFU'],
+  cta: {
+    label: 'View Project',
+    href: '#',
+    external: false,
+  },
+};
+
+const grapheNotetakingWork = {
+  title: 'Graphe Notetaking App',
+  subtitle: 'School Project',
+  description:
+    'A clean, focused notetaking app for capturing and organizing ideas—built for quick capture and easy retrieval.',
+  badges: ['Notetaking', 'Productivity', 'School Project'],
+  cta: {
+    label: 'View Project',
+    href: '#',
+    external: false,
+  },
+};
+
+const placeholderSlots = Array.from({ length: 1 }, (_, index) => index);
 
 export default function WorksPage() {
   return (
@@ -95,6 +134,73 @@ export default function WorksPage() {
                 rel={reactFastBentoWork.cta.external ? 'noreferrer' : undefined}
               >
                 {reactFastBentoWork.cta.label}
+              </Link>
+            </article>
+
+            <article className="item work-item">
+              <h2>{pitakapalWork.title}</h2>
+              <p className="work-item__subtitle">{pitakapalWork.subtitle}</p>
+              <p className="work-item__description">
+                {pitakapalWork.description}
+              </p>
+              <div className="work-item__badges">
+                {pitakapalWork.badges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
+              <Link
+                href={pitakapalWork.cta.href}
+                className="work-item__cta"
+                target={pitakapalWork.cta.external ? '_blank' : undefined}
+                rel={pitakapalWork.cta.external ? 'noreferrer' : undefined}
+              >
+                {pitakapalWork.cta.label}
+              </Link>
+            </article>
+
+            <article className="item work-item">
+              <h2>{olfuCommuteSmartWork.title}</h2>
+              <p className="work-item__subtitle">
+                {olfuCommuteSmartWork.subtitle}
+              </p>
+              <p className="work-item__description">
+                {olfuCommuteSmartWork.description}
+              </p>
+              <div className="work-item__badges">
+                {olfuCommuteSmartWork.badges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
+              <Link
+                href={olfuCommuteSmartWork.cta.href}
+                className="work-item__cta"
+                target={olfuCommuteSmartWork.cta.external ? '_blank' : undefined}
+                rel={olfuCommuteSmartWork.cta.external ? 'noreferrer' : undefined}
+              >
+                {olfuCommuteSmartWork.cta.label}
+              </Link>
+            </article>
+
+            <article className="item work-item">
+              <h2>{grapheNotetakingWork.title}</h2>
+              <p className="work-item__subtitle">
+                {grapheNotetakingWork.subtitle}
+              </p>
+              <p className="work-item__description">
+                {grapheNotetakingWork.description}
+              </p>
+              <div className="work-item__badges">
+                {grapheNotetakingWork.badges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
+              <Link
+                href={grapheNotetakingWork.cta.href}
+                className="work-item__cta"
+                target={grapheNotetakingWork.cta.external ? '_blank' : undefined}
+                rel={grapheNotetakingWork.cta.external ? 'noreferrer' : undefined}
+              >
+                {grapheNotetakingWork.cta.label}
               </Link>
             </article>
 

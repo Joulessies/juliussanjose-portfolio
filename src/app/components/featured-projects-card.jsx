@@ -16,6 +16,18 @@ const projects = [
     name: 'Daffodil Flower Shop',
     type: ['Branding', 'Ecommerce Experience', 'Custom Integrations'],
   },
+  {
+    name: 'Pitakapal',
+    type: ['Web App', 'Finance', 'School Project'],
+  },
+  {
+    name: 'OLFU Commute Smart',
+    type: ['Transport', 'Freelance', 'OLFU'],
+  },
+  {
+    name: 'Graphe Notetaking App',
+    type: ['Notetaking', 'Productivity', 'School Project'],
+  },
 ];
 
 export function FeaturedProjectsCard() {
