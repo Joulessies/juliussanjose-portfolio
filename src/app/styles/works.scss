@@ -1,0 +1,208 @@
+.works-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    width: 100%;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  .page-content {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    overflow: visible;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(340px, auto);
+  gap: 16px;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  .item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+    padding: clamp(1rem, 2vw, 2rem);
+    color: var(--text-primary);
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.3s ease;
+
+    * {
+      color: var(--text-primary);
+    }
+
+    p {
+      color: var(--text-secondary);
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--card-hover-border);
+    }
+  }
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px;
+
+  // Top accent stripe
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover), transparent);
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  &__description {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    span {
+      padding: 0.25rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      background: var(--bg-secondary);
+      transition: border-color 0.2s ease, background 0.2s ease;
+
+      &:hover {
+        border-color: var(--accent);
+        background: var(--accent-glow);
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    width: fit-content;
+
+    &:hover {
+      box-shadow: 0 4px 16px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &--secondary {
+      margin-top: 0.75rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+
+      &:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-glow);
+        box-shadow: none;
+        transform: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(320px, auto);
+  }
+}
+
+@media (max-width: 900px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(0, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .works-page__content {
+    padding: clamp(0.5rem, 4vw, 1rem);
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(0, auto);
+    gap: 14px;
+  }
+
+  .work-item {
+    padding: 1rem;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .works-grid {
+    gap: 12px;
+  }
+
+  .work-item {
+    padding: 0.9rem;
+  }
+}
