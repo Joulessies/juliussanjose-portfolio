@@ -12,7 +12,7 @@ const reader = createReader(process.cwd(), keystaticConfig);
 
 const mdxComponents = {
   pre: ({ children }: { children: React.ReactElement }) => {
-    const code = children?.props;
+    const code = children?.props as { className?: string; children?: React.ReactNode };
     const lang = (code?.className ?? '').replace('language-', '').toUpperCase() || 'CODE';
     const content = code?.children ?? '';
     return <CodeBlock lang={lang} code={String(content).trimEnd()} />;
